@@ -5,42 +5,44 @@
             "image": "./assets/images/s4-box1-img.jpg",
             "name": "Salted Fried Chicken",
             "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-            "price": 35.50
+            "price": 35.5
         },
         {
             "id": 2,
             "image": "./assets/images/s4-box2-img.jpg",
             "name": "Italian Sauce Mushroom",
             "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-            "price": 35.50
+            "price": 35.5
         },
         {
             "id": 3,
             "image": "./assets/images/s4-box2-img.jpg",
             "name": "Italian Sauce Mushroom",
             "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-            "price": 24.50
+            "price": 24.5
         },
         {
             "id": 4,
             "image": "./assets/images/s4-box1-img.jpg",
             "name": "Salted Fried Chicken",
             "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-            "price": 12.50
+            "price": 12.5
         },
         {
             "id": 5,
             "image": "./assets/images/s4-box3-img.jpg",
             "name": "Fried Potato w/ Garlic",
             "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-            "price": 14.50
+            "price": 14.5
         },
         {
             "id": 6,
             "image": "./assets/images/s4-box3-img.jpg",
             "name": "Fried Potato w/ Garlic",
             "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-            "price": 18.50
+            "price": 18.5
         }
-    ]
+    ],
+    "favorites": [],
+    "basket": []
 }

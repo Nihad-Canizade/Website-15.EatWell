@@ -49,9 +49,9 @@ function getDataApi() {
                 sec4Boxs.innerHTML += `
                 <div class="sec4-box">
                         <div class="sec4-box-icons">
-                            <i class="bi bi-eye"></i>
+                           <a href = "./details.html?id=${element.id}" target = "_blank"><i class="bi bi-eye"></i></a>
                             <i class="bi bi-cart-plus"></i>
-                            <i class="bi bi-heart-fill"></i>
+                            <i class="bi bi-heart-fill" onclick = "addFavorites(${element.id})"></i>
                         </div>
                         <div class="sec4-box-forimg">
                             <img src="${element.image}" alt="Image">
@@ -85,24 +85,34 @@ function getDataApi() {
                 filter.forEach(element => {
                     sec4Boxs.innerHTML += `
                     <div class="sec4-box">
-                        <div class="sec4-box-icons">
-                            <i class="bi bi-eye"></i>
-                            <i class="bi bi-cart-plus"></i>
-                            <i class="bi bi-heart-fill"></i>
-                        </div>
-                        <div class="sec4-box-forimg">
-                            <img src="${element.image}" alt="Image">
-                        </div>
-                        <div class="sec4-box-fortext">
-                            <p class="sec4-box-p1">${element.name}</p>
-                            <p class="sec4-box-p2">${element.description}</p>
-                            <p class="sec4-box-p3">$${element.price}</p>
-                        </div>
-                    </div>`
+                    <div class="sec4-box-icons">
+                       <a href = "./details.html?id=${element.id}" target = "_blank"><i class="bi bi-eye"></i></a>
+                        <i class="bi bi-cart-plus"></i>
+                        <i class="bi bi-heart-fill" onclick = "addFavorites(${element.id})"></i>
+                    </div>
+                    <div class="sec4-box-forimg">
+                        <img src="${element.image}" alt="Image">
+                    </div>
+                    <div class="sec4-box-fortext">
+                        <p class="sec4-box-p1">${element.name}</p>
+                        <p class="sec4-box-p2">${element.description}</p>
+                        <p class="sec4-box-p3">$${element.price}</p>
+                    </div>
+                </div>`
                 })
             })
         })
 }
 
 getDataApi();
+
+
+
+// Add Favorites function
+function addFavorites(id) {
+    axios.get("http://localhost:3000/boxs/" + id)
+        .then(res => {
+            axios.post("http://localhost:3000/favorites", res.data);
+        });
+}
 
